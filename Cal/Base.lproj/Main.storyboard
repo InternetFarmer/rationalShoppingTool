@@ -60,7 +60,7 @@
                         <outlet property="startButton" destination="mz4-Hd-9QB" id="CFZ-bg-n7p"/>
                         <outlet property="titleLabel" destination="odh-Zn-iMw" id="Z7q-p4-P5p"/>
                         <segue destination="bvw-i1-3mm" kind="show" identifier="StartToPriceSegue" id="FSB-1e-8sr"/>
-                        <segue destination="0qr-el-QC3" kind="show" identifier="StartToSalarySegue" id="qOk-VY-eq3"/>
+                        <segue destination="0qr-el-QC3" kind="modal" identifier="StartToSalarySegue" modalTransitionStyle="crossDissolve" id="qOk-VY-eq3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -198,7 +198,11 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="CALCULTOR" id="H7c-UP-bcz">
-                                        <barButtonItem key="leftBarButtonItem" image="ico_close" id="H08-hT-or5"/>
+                                        <barButtonItem key="leftBarButtonItem" image="ico_close" id="H08-hT-or5">
+                                            <connections>
+                                                <segue destination="fd8-ww-yKZ" kind="unwind" unwindAction="unwindToViewController:" id="Aq1-by-RWD"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" image="ico_profile_blank" id="jOi-ay-Kmn"/>
                                     </navigationItem>
                                 </items>
@@ -233,6 +237,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qTT-a0-d13" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="fd8-ww-yKZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1046.5" y="314.5"/>
         </scene>
@@ -248,23 +253,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eOq-hf-i64" customClass="NavigationBar" customModule="Cal" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="S66-U9-aZ6"/>
-                                </constraints>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="CALCULTOR" id="Ej4-ow-vZ4">
-                                        <barButtonItem key="leftBarButtonItem" image="ico_close" id="O5c-Rb-WKe"/>
-                                        <barButtonItem key="rightBarButtonItem" image="ico_profile_blank" id="ufa-Og-Tv5"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much do you make per hour?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6d-HH-QdA">
                                 <rect key="frame" x="37" y="114" width="300" height="72"/>
                                 <constraints>
@@ -272,7 +260,7 @@
                                     <constraint firstAttribute="height" constant="72" id="Hlt-ys-AxA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBJ-Jg-zPm">
@@ -282,7 +270,7 @@
                                     <constraint firstAttribute="width" constant="30" id="bys-gV-SBc"/>
                                 </constraints>
                                 <state key="normal" image="ico_delete">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="deleteDigit:" destination="0qr-el-QC3" eventType="touchUpInside" id="PoQ-Fh-kCj"/>
@@ -362,6 +350,27 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eOq-hf-i64" customClass="NavigationBar" customModule="Cal" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="S66-U9-aZ6"/>
+                                </constraints>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="CALCULTOR" id="Ej4-ow-vZ4">
+                                        <barButtonItem key="leftBarButtonItem" image="ico_close" id="O5c-Rb-WKe">
+                                            <connections>
+                                                <segue destination="XOQ-ho-yWa" kind="unwind" unwindAction="unwindToViewController:" id="rMN-3i-UNT"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="ico_profile_blank" id="ufa-Og-Tv5"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -388,10 +397,11 @@
                         <outlet property="keyboardView" destination="Q5J-ah-gfW" id="18V-iF-qKe"/>
                         <outlet property="nextButton" destination="dSH-T8-ifi" id="E6U-JF-4VF"/>
                         <outlet property="profileIconView" destination="kXv-Xf-jGQ" id="3OC-Zj-PxL"/>
-                        <segue destination="bvw-i1-3mm" kind="show" identifier="SalaryToPriceSegue" id="ufZ-hh-oYW"/>
+                        <segue destination="bvw-i1-3mm" kind="modal" identifier="SalaryToPriceSegue" modalTransitionStyle="crossDissolve" id="ufZ-hh-oYW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iZa-mu-cEQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="XOQ-ho-yWa" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="508.5" y="-342.5"/>
         </scene>
@@ -415,7 +425,11 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Calculator" id="fVq-YI-gIu">
-                                        <barButtonItem key="leftBarButtonItem" image="ico_back" id="KiV-05-MMl"/>
+                                        <barButtonItem key="leftBarButtonItem" image="ico_back" id="KiV-05-MMl">
+                                            <connections>
+                                                <segue destination="YbR-fZ-i4D" kind="unwind" unwindAction="unwindToViewController:" id="fES-bJ-5Ta"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" image="ico_profile_filled" id="aey-UO-LiP"/>
                                     </navigationItem>
                                 </items>
@@ -691,6 +705,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SNr-Pi-DnZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="YbR-fZ-i4D" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1567.5" y="314.5"/>
         </scene>
