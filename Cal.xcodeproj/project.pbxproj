@@ -59,6 +59,8 @@
 		94E597371D27951D00863507 /* Doule+TwoDecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E597361D27951D00863507 /* Doule+TwoDecimal.swift */; };
 		94E597391D27979900863507 /* genericAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E597381D27979900863507 /* genericAPI.swift */; };
 		94E5973D1D2797E700863507 /* PersisitencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E5973C1D2797E700863507 /* PersisitencyManager.swift */; };
+		94E597461D28E08E00863507 /* history.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94E597441D28E08E00863507 /* history.plist */; };
+		94E597471D28E08E00863507 /* user_info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94E597451D28E08E00863507 /* user_info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +153,8 @@
 		94E597361D27951D00863507 /* Doule+TwoDecimal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Doule+TwoDecimal.swift"; sourceTree = "<group>"; };
 		94E597381D27979900863507 /* genericAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = genericAPI.swift; sourceTree = "<group>"; };
 		94E5973C1D2797E700863507 /* PersisitencyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersisitencyManager.swift; sourceTree = "<group>"; };
+		94E597441D28E08E00863507 /* history.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = history.plist; sourceTree = "<group>"; };
+		94E597451D28E08E00863507 /* user_info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = user_info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +222,7 @@
 		946799C41D1F9AE300DC8427 = {
 			isa = PBXGroup;
 			children = (
+				94E597431D28E08E00863507 /* Data */,
 				94E5972B1D237CE200863507 /* Model */,
 				94679A3B1D20F18A00DC8427 /* Extension */,
 				94679A061D1FAA6E00DC8427 /* View */,
@@ -328,6 +333,16 @@
 			path = Cal/Model;
 			sourceTree = "<group>";
 		};
+		94E597431D28E08E00863507 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				94E597441D28E08E00863507 /* history.plist */,
+				94E597451D28E08E00863507 /* user_info.plist */,
+			);
+			name = Data;
+			path = Cal/Data;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -436,8 +451,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94E597461D28E08E00863507 /* history.plist in Resources */,
 				946799DB1D1F9AE300DC8427 /* LaunchScreen.storyboard in Resources */,
 				946799D81D1F9AE300DC8427 /* Assets.xcassets in Resources */,
+				94E597471D28E08E00863507 /* user_info.plist in Resources */,
 				94679A2F1D20765900DC8427 /* Keyboard.xib in Resources */,
 				071501A31D2B535D0026910E /* LoadingView.xib in Resources */,
 				071501A01D2B535D0026910E /* Info.plist in Resources */,
