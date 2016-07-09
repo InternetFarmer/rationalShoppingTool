@@ -24,7 +24,7 @@ class genericAPI {
     }
     
     func getUserInit() -> Bool {
-        return persitencyManager.isUserInit()
+        return false
     }
     
     func updateUserInit(is_init: Bool){

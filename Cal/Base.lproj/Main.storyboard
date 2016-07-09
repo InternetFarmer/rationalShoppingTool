@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -203,8 +203,8 @@
                                             <constraint firstAttribute="width" constant="20" id="hjt-a8-ZqU"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CALCULATOR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbN-mp-qAT">
-                                        <rect key="frame" x="136" y="10" width="104" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CALCULATOR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbN-mp-qAT">
+                                        <rect key="frame" x="136" y="9" width="104" height="22"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -321,8 +321,8 @@
                                                     <constraint firstAttribute="width" constant="23" id="bQw-j4-kpu"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUL-ac-LUb">
-                                                <rect key="frame" x="102" y="0.0" width="69" height="22"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUL-ac-LUb">
+                                                <rect key="frame" x="100" y="0.0" width="63" height="22"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -403,6 +403,25 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOV-BI-f4r" customClass="DesignableButton" customModule="Cal" customModuleProvider="target">
+                                        <rect key="frame" x="347" y="12" width="18" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="18" id="ayx-DH-0tJ"/>
+                                            <constraint firstAttribute="height" constant="16" id="sDC-He-ISD"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="ico_profile_blank"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                <real key="value" value="0.34999999999999998"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                <real key="value" value="0.10000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeIn"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnW-E7-UlO" customClass="DesignableButton" customModule="Cal" customModuleProvider="target">
                                         <rect key="frame" x="10" y="12" width="16" height="16"/>
                                         <constraints>
@@ -426,25 +445,6 @@
                                         <connections>
                                             <segue destination="fMR-zh-YEo" kind="unwind" unwindAction="unwindToViewController:" id="MdY-5y-wDU"/>
                                         </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOV-BI-f4r" customClass="DesignableButton" customModule="Cal" customModuleProvider="target">
-                                        <rect key="frame" x="347" y="13" width="18" height="16"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="18" id="ayx-DH-0tJ"/>
-                                            <constraint firstAttribute="height" constant="16" id="sDC-He-ISD"/>
-                                        </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" image="ico_profile_blank"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                                <real key="value" value="0.34999999999999998"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                                <real key="value" value="0.10000000000000001"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeIn"/>
-                                        </userDefinedRuntimeAttributes>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -484,6 +484,7 @@
                         <outlet property="keyboardView" destination="Q5J-ah-gfW" id="18V-iF-qKe"/>
                         <outlet property="nextButton" destination="dSH-T8-ifi" id="E6U-JF-4VF"/>
                         <outlet property="profileIconView" destination="kXv-Xf-jGQ" id="3OC-Zj-PxL"/>
+                        <outlet property="saleryTitle" destination="yTr-Rm-1MR" id="iiS-74-GnQ"/>
                         <segue destination="bvw-i1-3mm" kind="modal" identifier="SalaryToPriceSegue" modalTransitionStyle="crossDissolve" id="ufZ-hh-oYW"/>
                     </connections>
                 </viewController>
@@ -601,8 +602,8 @@
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWx-7N-8GQ">
-                                                        <rect key="frame" x="0.0" y="36" width="167" height="47"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWx-7N-8GQ">
+                                                        <rect key="frame" x="0.0" y="36" width="167" height="46"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>

@@ -20,6 +20,8 @@ class SaleryViewController: UIViewController, KeyboardDelegate {
     
     @IBOutlet weak var nextButton: RadiusButton!
     
+    @IBOutlet weak var saleryTitle: DesignableLabel!
+    
     var api = genericAPI.sharedGenericAPI
     
     var saleryPerHour = 0.0
@@ -45,6 +47,17 @@ class SaleryViewController: UIViewController, KeyboardDelegate {
         keyboardView.delegate = self
         
         updateView()
+        
+        setAnimation()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        updateView()
+        setAnimation()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
     }
     
     func updateView() {
@@ -55,6 +68,14 @@ class SaleryViewController: UIViewController, KeyboardDelegate {
         } else {
             profileIconView.hidden = false
             nextButton.hidden = true
+        }
+    }
+    
+    func setAnimation() {
+        if(api.getUserInit()) {
+            saleryTitle.autostart = false
+        } else {
+            saleryTitle.autostart = true
         }
     }
     
