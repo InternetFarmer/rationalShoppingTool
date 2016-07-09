@@ -403,25 +403,6 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOV-BI-f4r" customClass="DesignableButton" customModule="Cal" customModuleProvider="target">
-                                        <rect key="frame" x="347" y="12" width="18" height="16"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="18" id="ayx-DH-0tJ"/>
-                                            <constraint firstAttribute="height" constant="16" id="sDC-He-ISD"/>
-                                        </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" image="ico_profile_blank"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                                <real key="value" value="0.34999999999999998"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                                <real key="value" value="0.10000000000000001"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeIn"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnW-E7-UlO" customClass="DesignableButton" customModule="Cal" customModuleProvider="target">
                                         <rect key="frame" x="10" y="12" width="16" height="16"/>
                                         <constraints>
@@ -446,30 +427,25 @@
                                             <segue destination="fMR-zh-YEo" kind="unwind" unwindAction="unwindToViewController:" id="MdY-5y-wDU"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CALCULATOR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTr-Rm-1MR" customClass="DesignableLabel" customModule="Cal" customModuleProvider="target">
-                                        <rect key="frame" x="135" y="9" width="104" height="22"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOV-BI-f4r" customClass="DesignableButton" customModule="Cal" customModuleProvider="target">
+                                        <rect key="frame" x="347" y="12" width="18" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="18" id="ayx-DH-0tJ"/>
+                                            <constraint firstAttribute="height" constant="16" id="sDC-He-ISD"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="ico_profile_blank"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="damping">
-                                                <real key="value" value="2"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                <real key="value" value="0.34999999999999998"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                                <real key="value" value="0.40000000000000002"/>
+                                                <real key="value" value="0.10000000000000001"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleX">
-                                                <real key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleY">
-                                                <real key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="y">
-                                                <real key="value" value="65"/>
-                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeIn"/>
                                         </userDefinedRuntimeAttributes>
-                                    </label>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -503,7 +479,6 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="Title_salary" destination="yTr-Rm-1MR" id="iDH-eG-IAx"/>
                         <outlet property="buttomContainer" destination="hY4-vH-QsF" id="XRD-sE-xrI"/>
                         <outlet property="displayNumber" destination="pDE-pQ-WuU" id="Ucc-Pj-91s"/>
                         <outlet property="keyboardView" destination="Q5J-ah-gfW" id="18V-iF-qKe"/>
