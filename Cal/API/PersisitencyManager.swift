@@ -9,50 +9,35 @@
 import Foundation
 
 class PersisitencyManager {
-    func isUserInit() -> Bool {
-        return false
-    }
 
-    // Key in the plist file for numberOfDigit value.
-    let NUMBER_OF_DIGITS_KEY = "numberOfDigits"
+    // Key in the plist file for whether user is init value.
+    let IS_INIT = "is_init"
     
     private let fileManager = NSFileManager.defaultManager()
     
-    /**
-     * Read from plist file to initilize configuration.
-     * Called when this app is initialized.
-     */
-    func configInit() throws{
-        let filename = getDocumentsDirectory().stringByAppendingPathComponent("setting.plist")
-        var resdict : NSMutableDictionary?
-        //check if file exists
-        if(!fileManager.fileExistsAtPath(filename)) {
-            // If it doesn't, copy it from the default file in the Bundle
-            if let bundlePath = NSBundle.mainBundle().pathForResource("setting", ofType: "plist") {
-                resdict = NSMutableDictionary(contentsOfFile: bundlePath)
-                do {
-                    try fileManager.copyItemAtPath(bundlePath, toPath: filename)
-                }catch _ {
-                    throw PersistencyError.FileCopyError
-                }
-            } else {
-                throw PersistencyError.FileDoesNotExist
-            }
-        }
-        
-        resdict = NSMutableDictionary(contentsOfFile: filename)
+    private var user_info_file = ""
+    
+    private var history_file = ""
+    
+    init() {
+        self.user_info_file = getDocumentsDirectory().stringByAppendingPathComponent("user_info.plist")
+        self.history_file = getDocumentsDirectory().stringByAppendingPathComponent("history.plist")
     }
     
-    private func updateBooleanValue(key: String, value: Bool) throws{
-        let filename = getDocumentsDirectory().stringByAppendingPathComponent("setting.plist")
-        let dict = NSMutableDictionary()
-        dict.setValue(value, forKey: key)
-        if fileManager.fileExistsAtPath(filename) {
-            if !dict.writeToFile(filename, atomically: true) {
-                throw PersistencyError.FileNotWritten
+    func isUserInit() -> Bool {
+        let resdict = NSMutableDictionary(contentsOfFile: user_info_file)
+        if let dict = resdict {
+            if let is_init = dict[self.IS_INIT]{
+                return is_init as! Bool
             }
-        } else {
-            throw PersistencyError.FileDoesNotExist
+        }
+        return false
+    }
+    
+    func updateUserInit(is_init: Bool) {
+        let dict = NSMutableDictionary()
+        if !dict.updateBooleanValue(user_info_file, key: IS_INIT, value: is_init) {
+            print("update user init failed")
         }
     }
     

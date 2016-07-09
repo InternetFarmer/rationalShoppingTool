@@ -8,7 +8,7 @@
 
 import Foundation
 class genericAPI {
-    private let persitencyManager : PersisitencyManager
+    private var persitencyManager : PersisitencyManager
     
     // API Singleton Instance.
     class var sharedGenericAPI: genericAPI {
@@ -19,11 +19,15 @@ class genericAPI {
     }
     
     // Consturct
-    private init() {
+    private init(){
         self.persitencyManager = PersisitencyManager()
     }
     
-    func isUserInit() -> Bool {
+    func getUserInit() -> Bool {
         return persitencyManager.isUserInit()
+    }
+    
+    func updateUserInit(is_init: Bool){
+        persitencyManager.updateUserInit(is_init)
     }
 }

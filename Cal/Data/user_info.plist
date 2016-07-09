@@ -4,5 +4,7 @@
 <dict>
 	<key>is_init</key>
 	<false/>
+	<key>salery</key>
+	<real>23.5</real>
 </dict>
 </plist>

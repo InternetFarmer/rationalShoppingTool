@@ -20,6 +20,8 @@ class SaleryViewController: UIViewController, KeyboardDelegate {
     
     @IBOutlet weak var nextButton: RadiusButton!
     
+    var api = genericAPI.sharedGenericAPI
+    
     var saleryPerHour = 0.0
     
     let gradientLayer = CAGradientLayer.getStyleForStartView()
@@ -67,6 +69,7 @@ class SaleryViewController: UIViewController, KeyboardDelegate {
     }
     
     @IBAction func nextClick(sender: AnyObject) {
+        api.updateUserInit(true)
         performSegueWithIdentifier("SalaryToPriceSegue", sender: self)
     }
 }

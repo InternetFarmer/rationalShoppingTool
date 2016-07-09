@@ -36,6 +36,7 @@
 		071501AE1D2B535D0026910E /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071501911D2B535D0026910E /* TransitionManager.swift */; };
 		071501AF1D2B535D0026910E /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071501921D2B535D0026910E /* TransitionZoom.swift */; };
 		071501B01D2B535D0026910E /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071501931D2B535D0026910E /* UnwindSegue.swift */; };
+		9420DC581D2F6D990075DD4A /* NSMutableDictionary+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9420DC571D2F6D990075DD4A /* NSMutableDictionary+Add.swift */; };
 		946799D11D1F9AE300DC8427 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946799D01D1F9AE300DC8427 /* AppDelegate.swift */; };
 		946799D61D1F9AE300DC8427 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 946799D41D1F9AE300DC8427 /* Main.storyboard */; };
 		946799D81D1F9AE300DC8427 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 946799D71D1F9AE300DC8427 /* Assets.xcassets */; };
@@ -124,6 +125,7 @@
 		071501911D2B535D0026910E /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		071501921D2B535D0026910E /* TransitionZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionZoom.swift; sourceTree = "<group>"; };
 		071501931D2B535D0026910E /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
+		9420DC571D2F6D990075DD4A /* NSMutableDictionary+Add.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableDictionary+Add.swift"; sourceTree = "<group>"; };
 		946799CD1D1F9AE300DC8427 /* Cal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		946799D01D1F9AE300DC8427 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		946799D51D1F9AE300DC8427 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 				94679A3C1D20F1BE00DC8427 /* UIColor+Gradient.swift */,
 				94679A3E1D20FBBA00DC8427 /* CAGradientLayer+Init.swift */,
 				94E597361D27951D00863507 /* Doule+TwoDecimal.swift */,
+				9420DC571D2F6D990075DD4A /* NSMutableDictionary+Add.swift */,
 			);
 			name = Extension;
 			path = Cal/Extension;
@@ -510,6 +513,7 @@
 				071501A41D2B535D0026910E /* Misc.swift in Sources */,
 				94679A3D1D20F1BE00DC8427 /* UIColor+Gradient.swift in Sources */,
 				071501981D2B535D0026910E /* DesignableButton.swift in Sources */,
+				9420DC581D2F6D990075DD4A /* NSMutableDictionary+Add.swift in Sources */,
 				071501961D2B535D0026910E /* AutoTextView.swift in Sources */,
 				071501941D2B535D0026910E /* AsyncButton.swift in Sources */,
 				071501951D2B535D0026910E /* AsyncImageView.swift in Sources */,

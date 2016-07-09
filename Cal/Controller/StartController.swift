@@ -29,7 +29,7 @@ class StartController: UIViewController {
     }
     
     @IBAction func startButtonClick(sender: AnyObject) {
-        if api.isUserInit() {
+        if api.getUserInit() {
             performSegueWithIdentifier("StartToPriceSegue", sender: self)
         } else {
             performSegueWithIdentifier("StartToSalarySegue", sender: self)
