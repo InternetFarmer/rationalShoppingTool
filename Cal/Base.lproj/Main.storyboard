@@ -195,34 +195,34 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ww-0W-Y6E">
-                                        <rect key="frame" x="10" y="12" width="16" height="16"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dS-tY-3nW">
+                                        <rect key="frame" x="335" y="5" width="30" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="16" id="ldy-fy-PAt"/>
-                                            <constraint firstAttribute="width" constant="16" id="yjJ-cE-OqW"/>
+                                            <constraint firstAttribute="height" constant="30" id="23I-1Z-kZ2"/>
+                                            <constraint firstAttribute="width" constant="30" id="zgs-7P-Rph"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" image="ico_close"/>
+                                        <state key="normal" image="ic_person_filled"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ww-0W-Y6E">
+                                        <rect key="frame" x="8" y="5" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="ldy-fy-PAt"/>
+                                            <constraint firstAttribute="width" constant="30" id="yjJ-cE-OqW"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="ico_close" backgroundImage="ico_close"/>
                                         <connections>
                                             <segue destination="JCJ-4P-kX2" kind="unwind" unwindAction="unwindToViewController:" id="Pey-V0-RUb"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTd-wN-OHS">
-                                        <rect key="frame" x="347" y="12" width="18" height="16"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="18" id="uX3-WT-BNw"/>
-                                            <constraint firstAttribute="height" constant="16" id="xoh-TD-kZQ"/>
-                                        </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" image="ico_profile_blank" backgroundImage="ico_profile_filled"/>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="FTd-wN-OHS" firstAttribute="centerY" secondItem="R3X-Va-ZP7" secondAttribute="centerY" id="3JW-M9-PWb"/>
                                     <constraint firstItem="8ww-0W-Y6E" firstAttribute="centerY" secondItem="R3X-Va-ZP7" secondAttribute="centerY" id="4Qf-oO-Nae"/>
-                                    <constraint firstAttribute="trailing" secondItem="FTd-wN-OHS" secondAttribute="trailing" constant="10" id="Ekg-kq-6kw"/>
+                                    <constraint firstAttribute="trailing" secondItem="2dS-tY-3nW" secondAttribute="trailing" constant="10" id="GtU-fF-e8a"/>
                                     <constraint firstItem="dbN-mp-qAT" firstAttribute="centerX" secondItem="R3X-Va-ZP7" secondAttribute="centerX" id="Hwh-rw-Loq"/>
+                                    <constraint firstItem="2dS-tY-3nW" firstAttribute="centerY" secondItem="R3X-Va-ZP7" secondAttribute="centerY" id="I7M-tg-ZSS"/>
                                     <constraint firstItem="dbN-mp-qAT" firstAttribute="centerY" secondItem="R3X-Va-ZP7" secondAttribute="centerY" id="mEV-Pt-SCe"/>
                                     <constraint firstAttribute="height" constant="40" id="xHG-gO-j3v"/>
                                     <constraint firstItem="8ww-0W-Y6E" firstAttribute="leading" secondItem="R3X-Va-ZP7" secondAttribute="leading" constant="10" id="xeu-dw-8Zv"/>
@@ -411,14 +411,14 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnW-E7-UlO" customClass="DesignableButton" customModule="Cal" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="12" width="16" height="16"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnW-E7-UlO" customClass="DesignableButton" customModule="Cal" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="5" width="30" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="16" id="4cw-Xj-xgR"/>
-                                            <constraint firstAttribute="width" constant="16" id="Afk-99-hnv"/>
+                                            <constraint firstAttribute="height" constant="30" id="4cw-Xj-xgR"/>
+                                            <constraint firstAttribute="width" constant="30" id="Afk-99-hnv"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" image="ico_close">
+                                        <state key="normal" image="ico_close" backgroundImage="ico_close">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -763,36 +763,42 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3tY-zB-q0w">
                                 <rect key="frame" x="0.0" y="20" width="375" height="40"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_back" translatesAutoresizingMaskIntoConstraints="NO" id="mFe-93-Du4">
-                                        <rect key="frame" x="8" y="10" width="20" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="20" id="cVZ-QG-jYz"/>
-                                            <constraint firstAttribute="height" constant="20" id="zL9-Jf-8KX"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_profile_filled" translatesAutoresizingMaskIntoConstraints="NO" id="cKb-nn-2YN">
-                                        <rect key="frame" x="347" y="10" width="20" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="20" id="Zp1-EZ-lCd"/>
-                                            <constraint firstAttribute="height" constant="20" id="xvA-0k-0zl"/>
-                                        </constraints>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CALCULATOR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7NT-DU-P0C">
                                         <rect key="frame" x="136" y="9" width="104" height="22"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qG-mR-Ruf">
+                                        <rect key="frame" x="4" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="JCW-kw-EgC"/>
+                                            <constraint firstAttribute="width" constant="40" id="s2K-01-W9w"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="ico_back"/>
+                                        <connections>
+                                            <segue destination="BgY-50-mTJ" kind="unwind" unwindAction="unwindToViewController:" id="Lpv-Qy-Iq5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJO-wd-6ea">
+                                        <rect key="frame" x="319" y="5" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="VXk-vW-JQr"/>
+                                            <constraint firstAttribute="height" constant="30" id="hV0-rM-iu8"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="ic_person_filled"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="cKb-nn-2YN" secondAttribute="trailing" constant="8" id="NjD-Ai-l9l"/>
-                                    <constraint firstItem="cKb-nn-2YN" firstAttribute="centerY" secondItem="3tY-zB-q0w" secondAttribute="centerY" id="VLT-fW-psq"/>
+                                    <constraint firstItem="SJO-wd-6ea" firstAttribute="centerY" secondItem="3tY-zB-q0w" secondAttribute="centerY" id="U5v-Xs-fHP"/>
+                                    <constraint firstItem="5qG-mR-Ruf" firstAttribute="centerY" secondItem="3tY-zB-q0w" secondAttribute="centerY" id="Zit-4s-EWH"/>
                                     <constraint firstItem="7NT-DU-P0C" firstAttribute="centerX" secondItem="3tY-zB-q0w" secondAttribute="centerX" id="cN6-iD-xu1"/>
-                                    <constraint firstItem="mFe-93-Du4" firstAttribute="leading" secondItem="3tY-zB-q0w" secondAttribute="leading" constant="8" id="cfE-k5-2Fi"/>
                                     <constraint firstItem="7NT-DU-P0C" firstAttribute="centerY" secondItem="3tY-zB-q0w" secondAttribute="centerY" id="dc4-Ln-cXj"/>
+                                    <constraint firstItem="5qG-mR-Ruf" firstAttribute="leading" secondItem="3tY-zB-q0w" secondAttribute="leading" constant="4" id="gh3-yW-tJE"/>
+                                    <constraint firstAttribute="trailing" secondItem="SJO-wd-6ea" secondAttribute="trailing" constant="10" id="hE9-rZ-Of2"/>
                                     <constraint firstAttribute="height" constant="40" id="rvy-y5-WAv"/>
-                                    <constraint firstItem="mFe-93-Du4" firstAttribute="centerY" secondItem="3tY-zB-q0w" secondAttribute="centerY" id="tho-IL-RIs"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -822,17 +828,18 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SNr-Pi-DnZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="BgY-50-mTJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1567.5" y="314.5"/>
         </scene>
     </scenes>
     <resources>
-        <image name="ico_back" width="12" height="18"/>
+        <image name="ic_person_filled" width="18" height="18"/>
+        <image name="ico_back" width="18" height="18"/>
         <image name="ico_close" width="18" height="18"/>
         <image name="ico_delete" width="23" height="16"/>
         <image name="ico_price_tag" width="27" height="27"/>
-        <image name="ico_profile_blank" width="23" height="20"/>
-        <image name="ico_profile_filled" width="21" height="18"/>
+        <image name="ico_profile_blank" width="18" height="18"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ufZ-hh-oYW"/>
