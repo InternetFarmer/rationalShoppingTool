@@ -14,7 +14,7 @@ class RadiusButton: UIButton {
         super.init(coder: aDecoder)!;
         self.backgroundColor = UIColor.clearColor()
         self.layer.cornerRadius = 5
-        self.layer.borderWidth = 3
+        self.layer.borderWidth = 2
         self.layer.borderColor = UIColor.whiteColor().CGColor
     }
 }
