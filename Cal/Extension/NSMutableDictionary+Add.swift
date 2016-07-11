@@ -9,7 +9,7 @@
 import Foundation
 
 extension NSMutableDictionary {
-    func updateBooleanValue(filename: String, key: String, value: Bool) -> Bool{
+    func updateValue(filename: String, key: String, value: AnyObject) -> Bool{
         self.setValue(value, forKey: key)
         return self.writeToFile(filename, atomically: true)
     }

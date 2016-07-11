@@ -45,10 +45,6 @@ class SaleryViewController: UIViewController, KeyboardDelegate {
         buttomContainer.layer.insertSublayer(gradientLayerForKeyboard, atIndex: 0)
         
         keyboardView.delegate = self
-        
-        updateView()
-        
-        setAnimation()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -91,6 +87,7 @@ class SaleryViewController: UIViewController, KeyboardDelegate {
     
     @IBAction func nextClick(sender: AnyObject) {
         api.updateUserInit(true)
+        api.updateUserSalary(self.saleryPerHour)
         performSegueWithIdentifier("SalaryToPriceSegue", sender: self)
     }
 }

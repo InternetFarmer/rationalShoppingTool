@@ -24,10 +24,29 @@ class genericAPI {
     }
     
     func getUserInit() -> Bool {
-        return false
+        return persitencyManager.isUserInit()
     }
     
-    func updateUserInit(is_init: Bool){
+    func updateUserInit(is_init: Bool) {
         persitencyManager.updateUserInit(is_init)
+    }
+    
+    func getUserSalary() -> Double {
+        return persitencyManager.getUserSalary()
+    }
+    
+    func updateUserSalary(salary: Double) {
+        persitencyManager.updateUserSalary(salary)
+    }
+    
+    func getLastestItem() -> ItemViewModel? {
+        if let item = persitencyManager.getLastestItem() {
+            return item.toViewModel()
+        }
+        return nil
+    }
+
+    func addItem(item : ItemViewModel) {
+        persitencyManager.addItem(item.item_name, item_price: item.item_price)
     }
 }

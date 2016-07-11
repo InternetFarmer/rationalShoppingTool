@@ -26,6 +26,8 @@ class PriceViewController: UIViewController, KeyboardDelegate {
     
     let gradientLayerForKeyboard = CAGradientLayer.getStyleForKeyboardView()
     
+    let api = genericAPI.sharedGenericAPI
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -67,6 +69,8 @@ class PriceViewController: UIViewController, KeyboardDelegate {
     }
     
     @IBAction func calculateClick(sender: AnyObject) {
+        api.addItem(ItemViewModel(item_name: "newItem", item_price: self.price))
+        api.getUserInit()
         performSegueWithIdentifier("detailsSegue", sender: self)
     }
 }
