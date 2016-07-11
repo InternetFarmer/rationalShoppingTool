@@ -254,7 +254,7 @@
                         <outlet property="calculateButton" destination="FwS-5Y-Nxy" id="Sm7-ie-m5Z"/>
                         <outlet property="displayNumber" destination="eOL-wF-aE5" id="gm2-Qa-XCT"/>
                         <outlet property="keyboardView" destination="Sdw-Dt-KRD" id="iWf-nU-un0"/>
-                        <segue destination="KhY-Zn-QTc" kind="showDetail" identifier="detailsSegue" id="LzX-Md-rGi"/>
+                        <segue destination="KhY-Zn-QTc" kind="presentation" identifier="detailsSegue" modalTransitionStyle="crossDissolve" id="LzX-Md-rGi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qTT-a0-d13" userLabel="First Responder" sceneMemberID="firstResponder"/>
