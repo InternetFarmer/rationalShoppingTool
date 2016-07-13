@@ -18,6 +18,6 @@ class ItemViewModel {
     }
     
     func getEstimatedWorkHour(salery : Double) -> Int {
-        return Int(item_price/salery)
+        return Int(item_price/5)
     }
 }

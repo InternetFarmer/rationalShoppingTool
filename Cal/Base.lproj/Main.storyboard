@@ -196,22 +196,22 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dS-tY-3nW">
-                                        <rect key="frame" x="335" y="5" width="30" height="30"/>
+                                        <rect key="frame" x="335" y="0.0" width="40" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="23I-1Z-kZ2"/>
-                                            <constraint firstAttribute="width" constant="30" id="zgs-7P-Rph"/>
+                                            <constraint firstAttribute="height" constant="40" id="23I-1Z-kZ2"/>
+                                            <constraint firstAttribute="width" constant="40" id="zgs-7P-Rph"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="ic_person_filled"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ww-0W-Y6E">
-                                        <rect key="frame" x="10" y="11" width="18" height="18"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="18" id="ldy-fy-PAt"/>
-                                            <constraint firstAttribute="width" constant="18" id="yjJ-cE-OqW"/>
+                                            <constraint firstAttribute="height" constant="40" id="ldy-fy-PAt"/>
+                                            <constraint firstAttribute="width" constant="40" id="yjJ-cE-OqW"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" image="ico_close" backgroundImage="ico_close"/>
+                                        <state key="normal" image="ico_close"/>
                                         <connections>
                                             <segue destination="JCJ-4P-kX2" kind="unwind" unwindAction="unwindToViewController:" id="Pey-V0-RUb"/>
                                         </connections>
@@ -220,12 +220,12 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="8ww-0W-Y6E" firstAttribute="centerY" secondItem="R3X-Va-ZP7" secondAttribute="centerY" id="4Qf-oO-Nae"/>
-                                    <constraint firstAttribute="trailing" secondItem="2dS-tY-3nW" secondAttribute="trailing" constant="10" id="GtU-fF-e8a"/>
+                                    <constraint firstAttribute="trailing" secondItem="2dS-tY-3nW" secondAttribute="trailing" id="GtU-fF-e8a"/>
                                     <constraint firstItem="dbN-mp-qAT" firstAttribute="centerX" secondItem="R3X-Va-ZP7" secondAttribute="centerX" id="Hwh-rw-Loq"/>
                                     <constraint firstItem="2dS-tY-3nW" firstAttribute="centerY" secondItem="R3X-Va-ZP7" secondAttribute="centerY" id="I7M-tg-ZSS"/>
                                     <constraint firstItem="dbN-mp-qAT" firstAttribute="centerY" secondItem="R3X-Va-ZP7" secondAttribute="centerY" id="mEV-Pt-SCe"/>
                                     <constraint firstAttribute="height" constant="40" id="xHG-gO-j3v"/>
-                                    <constraint firstItem="8ww-0W-Y6E" firstAttribute="leading" secondItem="R3X-Va-ZP7" secondAttribute="leading" constant="10" id="xeu-dw-8Zv"/>
+                                    <constraint firstItem="8ww-0W-Y6E" firstAttribute="leading" secondItem="R3X-Va-ZP7" secondAttribute="leading" id="xeu-dw-8Zv"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -411,14 +411,14 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnW-E7-UlO" customClass="DesignableButton" customModule="Cal" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="5" width="30" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnW-E7-UlO">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="4cw-Xj-xgR"/>
-                                            <constraint firstAttribute="width" constant="30" id="Afk-99-hnv"/>
+                                            <constraint firstAttribute="height" constant="40" id="4cw-Xj-xgR"/>
+                                            <constraint firstAttribute="width" constant="40" id="Afk-99-hnv"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" image="ico_close" backgroundImage="ico_close">
+                                        <state key="normal" image="ico_close">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -435,11 +435,11 @@
                                             <segue destination="fMR-zh-YEo" kind="unwind" unwindAction="unwindToViewController:" id="MdY-5y-wDU"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOV-BI-f4r" customClass="DesignableButton" customModule="Cal" customModuleProvider="target">
-                                        <rect key="frame" x="347" y="12" width="18" height="16"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOV-BI-f4r">
+                                        <rect key="frame" x="335" y="0.0" width="40" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="18" id="ayx-DH-0tJ"/>
-                                            <constraint firstAttribute="height" constant="16" id="sDC-He-ISD"/>
+                                            <constraint firstAttribute="width" constant="40" id="ayx-DH-0tJ"/>
+                                            <constraint firstAttribute="height" constant="40" id="sDC-He-ISD"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="ico_profile_blank"/>
@@ -457,11 +457,11 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="mnW-E7-UlO" firstAttribute="leading" secondItem="jrl-sg-Vtg" secondAttribute="leading" constant="10" id="C5M-T0-3eZ"/>
+                                    <constraint firstItem="mnW-E7-UlO" firstAttribute="leading" secondItem="jrl-sg-Vtg" secondAttribute="leading" id="C5M-T0-3eZ"/>
                                     <constraint firstItem="eOV-BI-f4r" firstAttribute="centerY" secondItem="jrl-sg-Vtg" secondAttribute="centerY" id="Lf6-ca-3fS"/>
                                     <constraint firstItem="mnW-E7-UlO" firstAttribute="centerY" secondItem="jrl-sg-Vtg" secondAttribute="centerY" id="YDj-vK-QAV"/>
                                     <constraint firstItem="yTr-Rm-1MR" firstAttribute="centerX" secondItem="jrl-sg-Vtg" secondAttribute="centerX" id="f5X-X8-p8z"/>
-                                    <constraint firstAttribute="trailing" secondItem="eOV-BI-f4r" secondAttribute="trailing" constant="10" id="fp0-qf-4ng"/>
+                                    <constraint firstAttribute="trailing" secondItem="eOV-BI-f4r" secondAttribute="trailing" id="fp0-qf-4ng"/>
                                     <constraint firstItem="yTr-Rm-1MR" firstAttribute="centerY" secondItem="jrl-sg-Vtg" secondAttribute="centerY" id="hIa-Mc-KqL"/>
                                     <constraint firstAttribute="height" constant="40" id="iUP-FZ-kMy"/>
                                 </constraints>
@@ -770,21 +770,21 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qG-mR-Ruf">
-                                        <rect key="frame" x="4" y="0.0" width="40" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="JCW-kw-EgC"/>
                                             <constraint firstAttribute="width" constant="40" id="s2K-01-W9w"/>
                                         </constraints>
-                                        <state key="normal" backgroundImage="ico_back"/>
+                                        <state key="normal" image="ico_back"/>
                                         <connections>
                                             <segue destination="BgY-50-mTJ" kind="unwind" unwindAction="unwindToViewController:" id="Lpv-Qy-Iq5"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJO-wd-6ea">
-                                        <rect key="frame" x="319" y="5" width="46" height="30"/>
+                                        <rect key="frame" x="335" y="0.0" width="40" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="46" id="VXk-vW-JQr"/>
-                                            <constraint firstAttribute="height" constant="30" id="hV0-rM-iu8"/>
+                                            <constraint firstAttribute="width" constant="40" id="VXk-vW-JQr"/>
+                                            <constraint firstAttribute="height" constant="40" id="hV0-rM-iu8"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="ic_person_filled"/>
@@ -796,8 +796,8 @@
                                     <constraint firstItem="5qG-mR-Ruf" firstAttribute="centerY" secondItem="3tY-zB-q0w" secondAttribute="centerY" id="Zit-4s-EWH"/>
                                     <constraint firstItem="7NT-DU-P0C" firstAttribute="centerX" secondItem="3tY-zB-q0w" secondAttribute="centerX" id="cN6-iD-xu1"/>
                                     <constraint firstItem="7NT-DU-P0C" firstAttribute="centerY" secondItem="3tY-zB-q0w" secondAttribute="centerY" id="dc4-Ln-cXj"/>
-                                    <constraint firstItem="5qG-mR-Ruf" firstAttribute="leading" secondItem="3tY-zB-q0w" secondAttribute="leading" constant="4" id="gh3-yW-tJE"/>
-                                    <constraint firstAttribute="trailing" secondItem="SJO-wd-6ea" secondAttribute="trailing" constant="10" id="hE9-rZ-Of2"/>
+                                    <constraint firstItem="5qG-mR-Ruf" firstAttribute="leading" secondItem="3tY-zB-q0w" secondAttribute="leading" id="gh3-yW-tJE"/>
+                                    <constraint firstAttribute="trailing" secondItem="SJO-wd-6ea" secondAttribute="trailing" id="hE9-rZ-Of2"/>
                                     <constraint firstAttribute="height" constant="40" id="rvy-y5-WAv"/>
                                 </constraints>
                             </view>
@@ -835,11 +835,11 @@
     </scenes>
     <resources>
         <image name="ic_person_filled" width="21" height="18"/>
-        <image name="ico_back" width="18" height="18"/>
-        <image name="ico_close" width="12" height="12"/>
+        <image name="ico_back" width="12" height="18"/>
+        <image name="ico_close" width="18" height="18"/>
         <image name="ico_delete" width="23" height="16"/>
         <image name="ico_price_tag" width="27" height="27"/>
-        <image name="ico_profile_blank" width="14" height="15"/>
+        <image name="ico_profile_blank" width="23" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ufZ-hh-oYW"/>
