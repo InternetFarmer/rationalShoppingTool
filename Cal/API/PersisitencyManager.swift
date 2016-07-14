@@ -21,12 +21,17 @@ class PersisitencyManager {
     
     private var user_info_file = ""
     
+    private var unit_file = ""
+    
     private let app = UIApplication.sharedApplication().delegate as! AppDelegate
+    
+    private let resdict : NSMutableDictionary?
     
     init() {
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
         let documentsDirectory = paths[0] as NSString
         self.user_info_file = documentsDirectory.stringByAppendingPathComponent("user_info.plist")
+        self.unit_file = documentsDirectory.stringByAppendingPathComponent("unit.plist")
         if(!fileManager.fileExistsAtPath(self.user_info_file)) {
             // If it doesn't, copy it from the default file in the Bundle
             let bundlePath = NSBundle.mainBundle().pathForResource("user_info", ofType: "plist")!
@@ -36,12 +41,22 @@ class PersisitencyManager {
                 fatalError("file reading failed")
             }
         }
+        
+        if(!fileManager.fileExistsAtPath(self.user_info_file)) {
+            // If it doesn't, copy it from the default file in the Bundle
+            let bundlePath = NSBundle.mainBundle().pathForResource("unit", ofType: "plist")!
+            do {
+                try fileManager.copyItemAtPath(bundlePath, toPath: self.unit_file)
+            }catch {
+                fatalError("file reading failed")
+            }
+        }
+        resdict = NSMutableDictionary(contentsOfFile: user_info_file)
     }
     
     
     // Read from plist file to check whether user is initialized
     func isUserInit() -> Bool {
-        let resdict = NSMutableDictionary(contentsOfFile: user_info_file)
         if let dict = resdict {
             if let is_init = dict[self.IS_INIT]{
                 return is_init as! Bool
@@ -52,7 +67,6 @@ class PersisitencyManager {
     
     // Read from plist to get user salary per hour
     func getUserSalary() -> Double {
-        let resdict = NSMutableDictionary(contentsOfFile: user_info_file)
         if let dict = resdict {
             if let salery = dict[self.SALARY]{
                 return salery as! Double
@@ -63,17 +77,19 @@ class PersisitencyManager {
     
     // Update the user initialization status in plist file
     func updateUserInit(is_init: Bool) {
-        let dict = NSMutableDictionary()
-        if !dict.updateValue(user_info_file, key: IS_INIT, value: is_init) {
-            print("update user init failed")
+        if let dict = resdict {
+            if !dict.updateValue(user_info_file, key: IS_INIT, value: is_init) {
+                print("update user init failed")
+            }
         }
     }
     
     // Update the user salary information in plist file
     func updateUserSalary(salary: Double) {
-        let dict = NSMutableDictionary()
-        if !dict.updateValue(user_info_file, key: SALARY, value: salary) {
-            print("update user salery failed")
+        if let dict = resdict {
+            if !dict.updateValue(user_info_file, key: SALARY, value: salary) {
+                print("update user salery failed")
+            }
         }
     }
     
@@ -110,5 +126,17 @@ class PersisitencyManager {
             fatalError("fetch failed: \(error)")
         }
         return nil
+    }
+    
+    // Get all stored unit dic
+    func getAllUnitList() -> [UnitViewModel] {
+        let resUnitDict = NSMutableDictionary(contentsOfFile: unit_file)
+        var res = [UnitViewModel]()
+        if let dic = resUnitDict {
+            for (key, value) in dic {
+                res.append(UnitViewModel(unit_name: key as! String, unit_price: value as! Double))
+            }
+        }
+        return res
     }
 }

@@ -11,6 +11,6 @@ import Foundation
 extension NSMutableDictionary {
     func updateValue(filename: String, key: String, value: AnyObject) -> Bool{
         self.setValue(value, forKey: key)
-        return self.writeToFile(filename, atomically: true)
+        return self.writeToFile(filename, atomically: false)
     }
 }

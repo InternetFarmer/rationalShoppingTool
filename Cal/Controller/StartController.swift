@@ -30,10 +30,8 @@ class StartController: UIViewController {
     
     @IBAction func startButtonClick(sender: AnyObject) {
         if api.getUserInit() {
-            print("user initialized")
             performSegueWithIdentifier("StartToPriceSegue", sender: self)
         } else {
-            print("user not initialized")
             performSegueWithIdentifier("StartToSalarySegue", sender: self)
         }
     }

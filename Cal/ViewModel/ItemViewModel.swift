@@ -18,6 +18,23 @@ class ItemViewModel {
     }
     
     func getEstimatedWorkHour(salery : Double) -> Int {
-        return Int(item_price/5)
+        return Int(item_price/salery)
+    }
+    
+    func getEqualUnit(times: Int) -> [UnitViewModel] {
+        let costPerTime = self.item_price/Double(times)
+        let api = genericAPI.sharedGenericAPI
+        var res = [UnitViewModel]()
+        let list = api.getAllUnitList()
+        for unit in list {
+            if isComparable(unit.unit_price, num2: costPerTime) {
+                res.append(unit)
+            }
+        }
+        return res
+    }
+    
+    private func isComparable(num1:Double, num2:Double) -> Bool{
+        return ((num1 / num2) >= 1) && ((num1 / num2) <= 4)
     }
 }

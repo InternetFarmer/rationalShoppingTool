@@ -49,4 +49,8 @@ class genericAPI {
     func addItem(item : ItemViewModel) {
         persitencyManager.addItem(item.item_name, item_price: item.item_price)
     }
+    
+    func getAllUnitList() -> [UnitViewModel] {
+        return persitencyManager.getAllUnitList()
+    }
 }
