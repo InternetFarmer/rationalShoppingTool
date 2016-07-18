@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -60,7 +60,7 @@
                         <outlet property="startButton" destination="mz4-Hd-9QB" id="CFZ-bg-n7p"/>
                         <outlet property="titleLabel" destination="odh-Zn-iMw" id="Z7q-p4-P5p"/>
                         <segue destination="bvw-i1-3mm" kind="show" identifier="StartToPriceSegue" id="FSB-1e-8sr"/>
-                        <segue destination="0qr-el-QC3" kind="presentation" identifier="StartToSalarySegue" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="qOk-VY-eq3"/>
+                        <segue destination="0qr-el-QC3" kind="presentation" identifier="StartToSalarySegue" modalTransitionStyle="crossDissolve" id="qOk-VY-eq3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -79,7 +79,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much does the item cost?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56S-4M-8xp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much does the item cost?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56S-4M-8xp" customClass="DesignableLabel" customModule="Cal" customModuleProvider="target">
                                 <rect key="frame" x="37" y="110" width="300" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="gKA-sA-1BC"/>
@@ -88,6 +88,17 @@
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideLeft"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="0.40000000000000002"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="0.10000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="curve" value="easeOut"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eOL-wF-aE5" customClass="UnderlineLabel" customModule="Cal" customModuleProvider="target">
                                 <rect key="frame" x="50" y="222" width="275" height="48"/>
@@ -142,14 +153,14 @@
                                         <rect key="frame" x="148" y="257" width="79" height="50"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_price_tag" translatesAutoresizingMaskIntoConstraints="NO" id="n4K-mx-kjP">
-                                                <rect key="frame" x="0.0" y="0.0" width="23" height="23"/>
+                                                <rect key="frame" x="0.0" y="5" width="23" height="23"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="23" id="UXL-aT-FU6"/>
                                                     <constraint firstAttribute="width" constant="23" id="a9B-a5-H67"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUD-pe-AIW">
-                                                <rect key="frame" x="30" y="0.0" width="49" height="22"/>
+                                                <rect key="frame" x="30" y="5" width="49" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="49" id="TPi-Se-Pv4"/>
                                                 </constraints>
@@ -163,9 +174,9 @@
                                             <constraint firstAttribute="height" constant="50" id="2gE-qd-Yst"/>
                                             <constraint firstItem="n4K-mx-kjP" firstAttribute="leading" secondItem="2an-ZI-52c" secondAttribute="leading" id="5aM-cA-7R4"/>
                                             <constraint firstAttribute="width" constant="79" id="AKr-9v-qV5"/>
-                                            <constraint firstItem="n4K-mx-kjP" firstAttribute="top" secondItem="2an-ZI-52c" secondAttribute="top" id="J1m-rq-qQs"/>
+                                            <constraint firstItem="n4K-mx-kjP" firstAttribute="top" secondItem="2an-ZI-52c" secondAttribute="top" constant="5" id="J1m-rq-qQs"/>
                                             <constraint firstItem="WUD-pe-AIW" firstAttribute="leading" secondItem="n4K-mx-kjP" secondAttribute="trailing" constant="7" id="KCS-YF-qfD"/>
-                                            <constraint firstItem="WUD-pe-AIW" firstAttribute="top" secondItem="2an-ZI-52c" secondAttribute="top" id="PVM-SC-Rnv"/>
+                                            <constraint firstItem="WUD-pe-AIW" firstAttribute="top" secondItem="2an-ZI-52c" secondAttribute="top" constant="5" id="PVM-SC-Rnv"/>
                                             <constraint firstItem="WUD-pe-AIW" firstAttribute="centerY" secondItem="n4K-mx-kjP" secondAttribute="centerY" id="fwc-1C-b2R"/>
                                         </constraints>
                                     </view>
@@ -261,6 +272,7 @@
                         <outlet property="calculateButton" destination="FwS-5Y-Nxy" id="Sm7-ie-m5Z"/>
                         <outlet property="displayNumber" destination="eOL-wF-aE5" id="gm2-Qa-XCT"/>
                         <outlet property="keyboardView" destination="Sdw-Dt-KRD" id="iWf-nU-un0"/>
+                        <outlet property="priceQuestion" destination="56S-4M-8xp" id="qRp-v5-1r6"/>
                         <segue destination="KhY-Zn-QTc" kind="presentation" identifier="detailsSegue" modalTransitionStyle="crossDissolve" id="LzX-Md-rGi"/>
                     </connections>
                 </viewController>
@@ -281,7 +293,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much do you make per hour?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6d-HH-QdA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much do you make per hour?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6d-HH-QdA" customClass="DesignableLabel" customModule="Cal" customModuleProvider="target">
                                 <rect key="frame" x="37" y="110" width="300" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="3Xt-Xq-PXD"/>
@@ -290,6 +302,16 @@
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideLeft"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="0.10000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="0.40000000000000002"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="curve" value="easeOut"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBJ-Jg-zPm">
                                 <rect key="frame" x="330" y="227" width="30" height="38"/>
@@ -330,14 +352,14 @@
                                         <rect key="frame" x="141" y="257" width="93" height="50"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_profile_blank" translatesAutoresizingMaskIntoConstraints="NO" id="1nY-BX-zXZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="23" height="22"/>
+                                                <rect key="frame" x="0.0" y="5" width="23" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="22" id="6Mj-wf-X6p"/>
                                                     <constraint firstAttribute="width" constant="23" id="bQw-j4-kpu"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUL-ac-LUb">
-                                                <rect key="frame" x="30" y="0.0" width="63" height="22"/>
+                                                <rect key="frame" x="30" y="5" width="63" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="63" id="DAM-f3-TBf"/>
                                                 </constraints>
@@ -348,12 +370,12 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="OUL-ac-LUb" firstAttribute="top" secondItem="kXv-Xf-jGQ" secondAttribute="top" id="4b7-LI-wHB"/>
+                                            <constraint firstItem="OUL-ac-LUb" firstAttribute="top" secondItem="kXv-Xf-jGQ" secondAttribute="top" constant="5" id="4b7-LI-wHB"/>
                                             <constraint firstItem="OUL-ac-LUb" firstAttribute="centerY" secondItem="1nY-BX-zXZ" secondAttribute="centerY" id="7ce-6G-9K5"/>
                                             <constraint firstAttribute="width" constant="93" id="DRm-6C-CNr"/>
                                             <constraint firstAttribute="height" constant="50" id="Nnu-8a-Ohk"/>
                                             <constraint firstItem="OUL-ac-LUb" firstAttribute="leading" secondItem="1nY-BX-zXZ" secondAttribute="trailing" constant="7" id="TRC-BR-cvx"/>
-                                            <constraint firstItem="1nY-BX-zXZ" firstAttribute="top" secondItem="kXv-Xf-jGQ" secondAttribute="top" id="V6E-Vx-HhL"/>
+                                            <constraint firstItem="1nY-BX-zXZ" firstAttribute="top" secondItem="kXv-Xf-jGQ" secondAttribute="top" constant="5" id="V6E-Vx-HhL"/>
                                             <constraint firstItem="1nY-BX-zXZ" firstAttribute="leading" secondItem="kXv-Xf-jGQ" secondAttribute="leading" id="efH-1y-L1A"/>
                                         </constraints>
                                     </view>
@@ -429,7 +451,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnW-E7-UlO">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnW-E7-UlO" customClass="DesignableButton" customModule="Cal" customModuleProvider="target">
                                         <rect key="frame" x="8" y="5" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="4cw-Xj-xgR"/>
@@ -453,7 +475,7 @@
                                             <segue destination="fMR-zh-YEo" kind="unwind" unwindAction="unwindToViewController:" id="MdY-5y-wDU"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOV-BI-f4r">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOV-BI-f4r" customClass="DesignableButton" customModule="Cal" customModuleProvider="target">
                                         <rect key="frame" x="337" y="5" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="ayx-DH-0tJ"/>
@@ -511,13 +533,17 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="CancelButton" destination="mnW-E7-UlO" id="r5z-d0-5Li"/>
                         <outlet property="buttomContainer" destination="hY4-vH-QsF" id="XRD-sE-xrI"/>
+                        <outlet property="cancelButton" destination="mnW-E7-UlO" id="vHg-9k-vgf"/>
                         <outlet property="displayNumber" destination="pDE-pQ-WuU" id="Ucc-Pj-91s"/>
                         <outlet property="keyboardView" destination="Q5J-ah-gfW" id="18V-iF-qKe"/>
                         <outlet property="nextButton" destination="dSH-T8-ifi" id="E6U-JF-4VF"/>
+                        <outlet property="profileButton" destination="eOV-BI-f4r" id="cfL-8E-4lR"/>
                         <outlet property="profileIconView" destination="kXv-Xf-jGQ" id="3OC-Zj-PxL"/>
+                        <outlet property="salaryQuestion" destination="Z6d-HH-QdA" id="bDg-SZ-chI"/>
                         <outlet property="saleryTitle" destination="yTr-Rm-1MR" id="iiS-74-GnQ"/>
-                        <segue destination="bvw-i1-3mm" kind="modal" identifier="SalaryToPriceSegue" modalTransitionStyle="crossDissolve" id="ufZ-hh-oYW"/>
+                        <segue destination="bvw-i1-3mm" kind="presentation" identifier="SalaryToPriceSegue" modalTransitionStyle="crossDissolve" id="ufZ-hh-oYW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iZa-mu-cEQ" userLabel="First Responder" sceneMemberID="firstResponder"/>

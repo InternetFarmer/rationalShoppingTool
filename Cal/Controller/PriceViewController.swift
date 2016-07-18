@@ -19,6 +19,7 @@ class PriceViewController: UIViewController, KeyboardDelegate {
     @IBOutlet weak var PriceIconView: UIView!
     
     @IBOutlet weak var calculateButton: RadiusButton!
+    @IBOutlet weak var priceQuestion: DesignableLabel!
     
     var price = 0.0
     
@@ -47,6 +48,12 @@ class PriceViewController: UIViewController, KeyboardDelegate {
         updateView()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        updateView()
+        setAnimation()
+    }
+
+    
     func updateView() {
         displayNumber.text = price.getItemPirceString()
         if(price.isChanged()) {
@@ -57,6 +64,15 @@ class PriceViewController: UIViewController, KeyboardDelegate {
             calculateButton.hidden = true
         }
     }
+    
+    func setAnimation() {
+        if(api.getUserInit()) {
+            priceQuestion.autostart = false
+        } else {
+           priceQuestion.autostart = true
+        }
+    }
+
     
     func keyPressed(Key: String) {
         price.appendDigit(Key)

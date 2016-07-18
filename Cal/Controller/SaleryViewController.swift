@@ -21,6 +21,9 @@ class SaleryViewController: UIViewController, KeyboardDelegate {
     @IBOutlet weak var nextButton: RadiusButton!
     
     @IBOutlet weak var saleryTitle: DesignableLabel!
+    @IBOutlet weak var cancelButton: DesignableButton!
+    @IBOutlet weak var profileButton: DesignableButton!
+    @IBOutlet weak var salaryQuestion: DesignableLabel!
     
     var api = genericAPI.sharedGenericAPI
     
@@ -47,13 +50,9 @@ class SaleryViewController: UIViewController, KeyboardDelegate {
         keyboardView.delegate = self
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewWillAppear(animated: Bool) {
         updateView()
         setAnimation()
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        
     }
     
     func updateView() {
@@ -70,8 +69,14 @@ class SaleryViewController: UIViewController, KeyboardDelegate {
     func setAnimation() {
         if(api.getUserInit()) {
             saleryTitle.autostart = false
+            cancelButton.autostart = false
+            profileButton.autostart = false
+            salaryQuestion.autostart = true
         } else {
             saleryTitle.autostart = true
+            cancelButton.autostart = true
+            profileButton.autostart = true
+            salaryQuestion.autostart = false
         }
     }
     
